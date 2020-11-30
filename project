@@ -1,0 +1,27 @@
+import tkinter
+# get() always returns string
+def display():
+    #amount=E2.get()
+    #new_amt=int(amount)# type convertion
+    name=E1.get() # get function will store the value which user has
+                  # enter in the entry box
+    print("Hi",name)            
+    L1=tkinter.Label(text="Welcome  "+ name,font=("Arial",20,"bold"),bg="pink")
+    L1.place(x=180,y=150)
+
+    
+window=tkinter.Tk()
+window.geometry("500x500")
+window.configure(bg="yellow")
+
+#font=("Arial",20,"underline") bold ,italics u may use
+L1=tkinter.Label(window,text="Welcome",font=("Arial",20,"underline"),bg="Blue")
+L1.place(x=180,y=0)  #instead of grid I have use place
+#L1.grid(row=2,coulmn=4)
+L2=tkinter.Label(window,text="Enter your name",font=("Arial",15,"bold"),bg="yellow")
+L2.place(x=5,y=50)
+E1=tkinter.Entry(width=20,font=("Arial",15,"bold"))
+E1.place(x=180,y=50)
+
+B1=tkinter.Button(text="SUBMIT",font=("Arial",10,"bold"),bg="red",command=display)
+B1.place(x=180,y=100)
